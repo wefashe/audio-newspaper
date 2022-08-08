@@ -28,7 +28,9 @@ public class Newspaper {
         if (now.getHour() > 12) {
             itemEnum = ItemEnum.FM_456498;
         }
-        writeMdFile(getJSONArray(ItemEnum.FM_456498, 1, 100));
+        int pageNum = 1;
+        int pageSize = 100;
+        writeMdFile(getJSONArray(itemEnum, pageNum, pageSize));
     }
 
     public static void play(String path) throws IOException, JavaLayerException {
